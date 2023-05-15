@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded;
     public bool hasJumped = false;
     public bool canJump = false;
+    public int swordValue;
     // Start is called before the first frame update
     void Start()
     {
@@ -78,6 +79,21 @@ public class PlayerController : MonoBehaviour
             canJump = false;
         }
 
+    }
+
+    void OnFire()
+    {
+        Debug.LogWarning("checking this works");
+        swordValue = Random.Range(1, 3);
+        if(swordValue == 1)
+        {
+            animator.SetTrigger("swordAttack1");
+
+        }
+        else if (swordValue == 2)
+        {
+            animator.SetTrigger("swordAttack2");
+        }
     }
 
     // Update is called once per frame

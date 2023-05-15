@@ -4470,7 +4470,7 @@ GameObject:
   - component: {fileID: 245954338}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5666,7 +5666,7 @@ Camera:
   far clip plane: 100
   field of view: 34
   orthographic: 1
-  orthographic size: 3.6333334
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5690,7 +5690,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.79, y: -4.37, z: -2}
+  m_LocalPosition: {x: -11.79, y: -4.15, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5819,7 +5819,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538146300}
   m_LocalRotation: {x: -0.0000000418695, y: -0.122183256, z: -0.0000000051543707, w: 0.9925076}
-  m_LocalPosition: {x: -11.79, y: -4.37, z: -2}
+  m_LocalPosition: {x: -11.79, y: -4.15, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6333,7 +6333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8008741603513072443, guid: 2cdbf36fe09de5f4ca330f67da22b809, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.37
+      value: -4.15
       objectReference: {fileID: 0}
     - target: {fileID: 8008741603513072443, guid: 2cdbf36fe09de5f4ca330f67da22b809, type: 3}
       propertyPath: m_LocalPosition.z

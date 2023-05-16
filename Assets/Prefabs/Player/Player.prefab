@@ -129,12 +129,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 500
+  maxSpeed: 5
+  idleFriction: 2
   input: {x: 0, y: 0}
   isMoving: 0
   isFalling: 0
   isGrounded: 0
   hasJumped: 0
   canJump: 1
+  swordValue: 0
 --- !u!114 &7522221007628993591
 MonoBehaviour:
   m_ObjectHideFlags: 0

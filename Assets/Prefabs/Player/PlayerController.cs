@@ -44,6 +44,8 @@ public class PlayerController : MonoBehaviour
         }
     }
     public float moveSpeed = 500f;
+    public float maxSpeed = 10f;
+    public float idleFriction = 2f;
     public Vector2 input = Vector2.zero;
     Rigidbody2D rb;
     Animator animator;
@@ -102,7 +104,13 @@ public class PlayerController : MonoBehaviour
         if (input != Vector2.zero)
         {
             rb.AddForce(input * moveSpeed * Time.fixedDeltaTime);
+            if(rb.velocity.magnitude > maxSpeed)
+            {
+                float limitedSpeed = Mathf.Lerp(rb.velocity.magnitude, maxSpeed, idleFriction);
+                rb.velocity = rb.velocity.normalized * limitedSpeed;
+            }
             IsMoving = true;
+
         }
         else
         {

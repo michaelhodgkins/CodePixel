@@ -5,25 +5,19 @@ using UnityEngine;
 
 public class Radius : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject spider;
-    public float speed = 2f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public List<Collider2D> detectedObjs;
+    public Collider2D col;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision != null)
+        if(collider.CompareTag("Player"))
         {
-            transform.position = Vector2.MoveTowards(spider.transform.position, player.transform.position, speed * Time.deltaTime);
+            detectedObjs.Add(collider);
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        detectedObjs.Remove(collider);
     }
 }

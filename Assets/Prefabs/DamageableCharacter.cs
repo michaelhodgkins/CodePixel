@@ -9,6 +9,11 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         set
         {
             _health = value;
+
+            if(_health <= 0)
+            {
+                OnObjectDestroyed();
+            }
         }
 
         get { return _health; }
